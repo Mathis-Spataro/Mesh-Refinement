@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>876</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Mesh_Computational_Geometry</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="GLDisplayWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>10</y>
+      <width>661</width>
+      <height>571</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>191</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>View type</string>
+    </property>
+    <widget class="QRadioButton" name="radio_view_wireframe">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Wireframe</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">viewTypeButtonGroup</string>
+     </attribute>
+    </widget>
+    <widget class="QRadioButton" name="radio_view_plain">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Plain triangles</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">viewTypeButtonGroup</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>148</y>
+      <width>191</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>2D meshes</string>
+    </property>
+    <widget class="QDoubleSpinBox" name="spinbox_Y">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>62</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>120</y>
+       <width>16</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>X</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="spinbox_X">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>62</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_addVertex">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>150</y>
+       <width>80</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add vertex</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_2D_singleTriangle">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Single triangle</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">meshChoiceButtonGroup</string>
+     </attribute>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>150</y>
+       <width>16</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Y</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_delaunize">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>240</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Delaunize mesh</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio_2D_naive">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>58</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Naive triangulation</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">meshChoiceButtonGroup</string>
+     </attribute>
+    </widget>
+    <widget class="QRadioButton" name="radio_2D_terrain">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>85</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Terrain (2.5D)</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">meshChoiceButtonGroup</string>
+     </attribute>
+    </widget>
+    <widget class="QDoubleSpinBox" name="spinbox_Z">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>180</y>
+       <width>62</width>
+       <height>23</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>185</y>
+       <width>57</width>
+       <height>14</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Z</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushbutton_ruppert">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>270</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply ruppert</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>215</y>
+       <width>171</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>478</y>
+      <width>191</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>3D meshes</string>
+    </property>
+    <widget class="QRadioButton" name="radio_3D_queen">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>56</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Queen</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">meshChoiceButtonGroup</string>
+     </attribute>
+    </widget>
+    <widget class="QRadioButton" name="radio_3D_cube">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cube</string>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">meshChoiceButtonGroup</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>130</y>
+      <width>181</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <zorder>groupBox</zorder>
+   <zorder>widget</zorder>
+   <zorder>groupBox_3</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>line_2</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GLDisplayWidget</class>
+   <extends>QWidget</extends>
+   <header>src/gldisplaywidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="viewTypeButtonGroup"/>
+  <buttongroup name="meshChoiceButtonGroup"/>
+ </buttongroups>
+</ui>
