@@ -35,7 +35,7 @@ This algorithm's completion is ensured by the strictly increasing mesh's quality
 
 ### Ruppert's algorithm
 
-This one is a way of increasing the quality of an already Delaunay-enforced mesh. Triangles are splitted in 2 until all angles in the mesh are bellow a threshold.
+This one is a way of increasing the quality of an already Delaunay-enforced mesh. Triangles are split in 2 until all angles in the mesh are bellow a threshold.
 
 ## Results
 
