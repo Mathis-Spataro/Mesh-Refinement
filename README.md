@@ -4,7 +4,7 @@ This software was an assignment project for our Geometry algorithms class during
 
 The starting code consisted of a window with only a GL module from Qt Creator.
 
-## work done
+## Work done
 
 We've implemented the following features :
 - Mesh loading from .off files
